@@ -52,11 +52,9 @@ class QuestionsPage extends React.Component {
 					<NavLink className="btn btn-info rounded-50 px-4 mb-3" exact to="/newquestion">
 						<small>+ ADD NEW QUESTION</small>
 					</NavLink>
+					
 					{questions.map((question, i) => <QuestionCard question={question} key={i} />)}
 				</div>
-				{/* <CartProgressBar />
-                <DiscountBar />
-                <CartContainer onIncrement={this.onIncrement} onDecrement={this.onDecrement} products={products} validpincode={this.state.validpincode} pincode={this.state.pincode} onDelete={this.deleteCartItem} onChangeInput={this.onChangeInput} /> */}
 			</div>
 		);
 	}
@@ -67,7 +65,6 @@ QuestionsPage.propTypes = {
 };
 
 function mapStateToProps(state) {
-	console.log(state);
 	return {
 		questions: state.questions
 	};
