@@ -1,0 +1,48 @@
+$primary: #007bff;
+
+.rounded-50 {
+	border-radius: 50px;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.choices-list {
+	li {
+		&::before {
+			content: "";
+			height: 20px;
+			width: 20px;
+			border-radius: 20px;
+			border: solid $primary 2px;
+			display: inline-block;
+			margin-right: 10px;
+		}
+		&.selected {
+			&::before {
+				background: $primary;
+				border: solid $primary 2px;
+			}
+		}
+	}
+}
+
+.voted {
+	.choices-list {
+		li::before {
+			display: none;
+		}
+	}
+}
+
+.p-bar {
+	height: 6px;
+	width: 250px;
+	border-radius: 20px;
+	overflow: hidden;
+	span {
+		display: block;
+		height: 6px;
+	}
+}
