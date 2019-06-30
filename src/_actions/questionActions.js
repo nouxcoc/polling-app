@@ -1,7 +1,7 @@
 import * as types from './actionTypes';
 
-const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-const apiurl = 'https://polls.apiblueprint.org/questions';
+const proxyurl = 'https://cors-anywhere.herokuapp.com/'; // CORS proxy
+const apiurl = 'https://polls.apiblueprint.org/questions'; // site that doesn’t send Access-Control-*
 
 export function loadQuestionsSuccess(questions) {
 	return { type: types.LOAD_QUESTIONS_SUCCESS, questions };
